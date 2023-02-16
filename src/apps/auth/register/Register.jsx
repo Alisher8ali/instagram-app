@@ -41,7 +41,7 @@ const Register = () => {
   return (
       <Components.Container>
         <section className={cls.register_page}>
-            <div className={cls.register_page_card}>
+            <div className={cls.register_page_card} data-aos="zoom-in-right">
                 <Components.Image src={logo}/>
                 <h3>Зарегистрируйтесь, чтобы смотреть фото и видео ваших друзей.</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -119,13 +119,7 @@ const Register = () => {
                 </form>
 
             </div>
-            <div className={cls.register_page_bottonCard}>
-                <p>Есть аккаунт?
-                    <Link to={AuthPath.login}>
-                        Вход
-                    </Link>
-                </p>
-            </div>
+           <Components.Forms.AuthNavigate location="register" />
         </section>
       </Components.Container>
   )
