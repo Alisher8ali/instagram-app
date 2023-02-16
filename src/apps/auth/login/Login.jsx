@@ -1,12 +1,17 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import { Components } from '../../../components';
-import cls from "../../../assets/styles/login/Login.module.scss"
-import logo from "../../../assets/images/logo/instagram.png"
 import { formsValidate } from '../../../helpers/forms';
 import { REQUEST } from '../../../api';
+import useLocations from '../../../hooks/useLocations';
+
+import cls from "../../../assets/styles/login/Login.module.scss";
+import logo from "../../../assets/images/logo/instagram.png";
+
+
 
 const Login = () => {
+  const{goToHome}=useLocations();
     const{
         register,
         handleSubmit,
@@ -22,6 +27,7 @@ const Login = () => {
           const data=res.data
           localStorage.setItem("access",data.access)
           localStorage.setItem("refresh",data.refresh)
+          goToHome();
         })
       }
     }
