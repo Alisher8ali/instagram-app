@@ -3,11 +3,9 @@ import { useForm } from 'react-hook-form';
 import cls from "../../../assets/styles/register/Register.module.scss";
 import logo from "../../../assets/images/logo/instagram.png";
 import { Components } from '../../../components';
-import { Link } from 'react-router-dom';
 import { formsValidate } from '../../../helpers/forms';
 import { REQUEST } from '../../../api';
 import { Hooks } from '../../../hooks';
-import { AuthPath } from '../../../services/path';
 
 
 
@@ -17,8 +15,7 @@ const Register = () => {
     const{
         register,
         handleSubmit,
-        formState:{errors,isValid},
-        setError
+        formState:{errors},
     }=useForm({
         mode:`onSubmit`
     });

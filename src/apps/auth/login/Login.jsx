@@ -3,31 +3,30 @@ import { useForm } from 'react-hook-form';
 import { Components } from '../../../components';
 import { formsValidate } from '../../../helpers/forms';
 import { REQUEST } from '../../../api';
-import useLocations from '../../../hooks/useLocations';
 
 import cls from "../../../assets/styles/login/Login.module.scss";
 import logo from "../../../assets/images/logo/instagram.png";
+import { Hooks } from '../../../hooks';
 
 
 
 const Login = () => {
-  const{goToHome}=useLocations();
+  const{goToHome}=Hooks.useLocations();
     const{
         register,
         handleSubmit,
-        formState:{errors,isValid},
-        setError
+        formState:{errors},
     }=useForm();
 
     const onSubmit=(data)=>{
       if(data){
         const request=REQUEST.LOGIN_USER(data);
         request
-        .then(res=>{
-          const data=res.data
-          localStorage.setItem("access",data.access)
-          localStorage.setItem("refresh",data.refresh)
-          goToHome();
+          .then(res=>{
+            const data=res.data
+            localStorage.setItem("access",data.access);
+            localStorage.setItem("refresh",data.refresh);
+            goToHome();
         })
       }
     }

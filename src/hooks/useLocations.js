@@ -11,7 +11,7 @@ const useLocations = () => {
 
   //Layout forwords
 
-  const goToHome=React.useCallback(()=>navigate(Layout.home),[navigate])
+  const goToHome = React.useCallback(() => navigate(Layout.home),[navigate])
 
 
   return {
@@ -20,4 +20,4 @@ const useLocations = () => {
   }
 }
 
-export default useLocations
+export default useLocations;

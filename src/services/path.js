@@ -7,7 +7,7 @@ export const Auth={
     login:"/authentification"
 }
 export const Layout={
-    home:"/"
+    home:"/",
 }
 export const AuthPath={
     login:"/accounts/authentification",

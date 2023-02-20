@@ -1,10 +1,10 @@
 import React from 'react'
-import { Layouts } from './Layout'
+import Layouts from './Layouts'
 
 export const LayoutRoutes = () => {
   return (
     <React.Fragment>
-        <Layouts/>
+      <Layouts/>
     </React.Fragment>
   )
 }

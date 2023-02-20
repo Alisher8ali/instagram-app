@@ -9,7 +9,8 @@ import { Components } from '../components';
 const Routes = () => {
 
   React.useEffect(()=>{
-    Aos.init({duration:1000
+    Aos.init({
+      duration:1000
     });
   },[]);
 

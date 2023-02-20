@@ -8,13 +8,52 @@
 
     &_content{
         padding-left: 25px;
+        height: 80%;
         img{
             object-position: 0 -30px;
             object-fit: cover;
             width: 103px;
-            height: 29px;
+            height: 31px;
             margin-top: 40px;
             cursor: pointer;
+        }
+        &_list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding-top: 35px;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+
+                li{
+                    font-size: 16px;
+                    transition: .1s;
+                    padding: 10px 10px;
+                    border-radius: 25px;
+                    width: 85%;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                        color: #000;
+                        svg{
+                            font-size: 26px;
+                        }
+                    }
+                    &:hover{
+                        background-color: rgba(0,0,0,.3);
+                        border-radius: 25px;
+                        padding: 10px 10px;
+                        svg{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
         }
     }
 }

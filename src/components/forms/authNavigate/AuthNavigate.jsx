@@ -5,7 +5,7 @@ import cls from "../../../assets/styles/forms/Forms.module.scss"
 
 export const AuthNavigate = ({location}) => {
   return (
-    <div className={cls.auth_page_bottonCard} data-aos="zoom-in-right">
+    <div className={cls.auth_page_bottonCard}>
         <p>
             {
                 location==="login"

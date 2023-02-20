@@ -29,7 +29,7 @@ ul{
 .layout_row{
   display: flex;
 }
-.layout_route .layout_sidebar{
+.layout_row .layout_sidebar{
   width: 335px;
   height: 100vh;
 }

@@ -1,10 +1,12 @@
 import React from 'react'
 import { Components } from '../../../components'
 
-export const Home = () => {
+const Home = () => {
   return (
     <Components.Container>
-        <h1>home</h1>
+      <h1>Home</h1>
     </Components.Container>
   )
 }
+
+export default Home;
